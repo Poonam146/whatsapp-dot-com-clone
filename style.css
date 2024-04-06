@@ -1,0 +1,272 @@
+@import url('https://fonts.googleapis.com/css2?family=Neue:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    height:100%;
+    width:100%;
+    font-size: 12px;
+    background: #fcf5eb;
+    color: #1c1e21;
+    direction: ltr; /* Left-to-right text direction */
+    margin: 0;
+    padding: 0;
+    unicode-bidi: embed;
+    font-family:  Neue, Helvetica Neue, Helvetica, Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 60px;
+    background-color: #fcf5eb;
+    z-index: 1000;
+}
+.navbar.scrolled {
+    background-color: #fcf5ebd1;
+    border-bottom: 2px solid #0000001a;
+    backdrop-filter: blur(2px);
+    transition: background-color 200ms linear;
+}
+/* paragraph with class tnc move it to extreme right */
+.tnc {
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    font-size: 14px;
+
+    font-weight: 400;
+}
+.logo-img img, .footer-logo img {
+    width: 130px;
+    height: 30.5px;
+    margin-top: 7px;
+}
+a {
+    text-decoration: none;
+    color: #1c1e21;
+}
+.header-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.header-links a {
+    margin: 0 10px;
+    font-weight: 400;
+    position: relative; /* Add position relative for proper positioning of pseudo-element */
+}
+
+
+
+
+
+.dwnld-btn {
+
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #25d366;
+    color: #1c1e21;
+    font-size: 16px;
+    font-weight: 400;
+   
+    border-radius: 20px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+/* make .dwnld-btn on hover the green colors looks moving up with coming blac */
+.dwnld-btn:hover {
+    background-color: #142318;
+    color: #FFFFFF;
+    transition: 0.5s;
+    transform: translateY(-5px);
+}
+.brdr
+{
+    border: #000000ea 2px solid;
+}
+.svgimg
+{   
+    width: 15px;
+    height: 15px
+}
+/* how to create a hover animation that gets underline on hover */
+
+.hero-section {
+    position: relative;
+    top: 64px;
+    width: 100%;
+    height: 100vh;
+  padding-top: 64px;
+margin-bottom: 20vh;
+    background-color: #fcf5eb;
+    /* background-color: rgb(18, 53, 53); */
+    
+
+}
+.hero-content-bx {
+    /* background-color: #fcf5eb; */
+    border-radius: 20px;
+    padding: 20px 60px;
+   height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-left {
+    height: 100%;
+    /* background-color: aquamarine; */
+    width: 50%;
+    float: left;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.text-content {
+    margin-top: 20px;
+}
+
+.hero-right {
+    height: 100%;
+    /* background-color: red; */
+    width: 50%;
+    float: right;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 92%;
+    margin: 0 auto;
+    color: aliceblue;
+    background-image: url("./background.png");
+    background-size: cover; 
+    background-position: center; 
+    border-radius: 20px; 
+    height: 100% ;
+}
+.messenger {
+    float: right;
+    border-radius: 20px;
+    
+}
+/* Adjust the size of images in messenger messages */
+.msg img {
+    max-width: 70%; /* Ensure images do not exceed the width of the message container */
+    display: block; /* Ensure the image is displayed as a block element */
+    border: 0; /* Remove the border around images */
+    margin: 0 auto; /* Center the image within the message container */
+    transition: opacity 0.5s ease; /* Add a smooth transition effect */
+}
+
+/* Make the heart image overlap the "Good morning" message */
+/* Adjust the position of the smiley and heart images */
+.msg img[src='./messages/smiley.png'],
+.msg img[src='./messages/heart.png'] {
+    position: relative;
+    top: -20px; /* Adjust the top position as needed */
+    left: 10px; /* Adjust the left position as needed */
+    z-index: 1; /* Ensure the images are on top of the message */
+}
+
+/* Define animation keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animation to the images */
+.anim {
+    animation: fadeInUp 0.5s ease forwards;
+    opacity: 0; /* Initially hide the images */
+}
+
+/* Ensure the images are visible after animation */
+.animimg {
+    opacity: 1;
+}
+
+/* Apply animation to the images */
+.anim {
+    animation: fadeInUp 0.7s ease forwards;
+    opacity: 0; /* Initially hide the images */
+}
+
+.text-content h1 {
+    font-family:  Neue, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 80px;
+    font-weight: 400;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.text-content p {
+    width: 80%;
+    font-family:  Neue, Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+}
+
+
+/* Add hover effect to the button */
+.hero-btn:hover {
+    background-color: #0d882e;
+    color: #FFFFFF;
+}
+
+/* hero-section 2 same as hero-section but not postion relative like that one */
+.hero-section-two {
+    position: relative;
+    width: 100%;
+ margin-top: 30px;
+    height: 100vh;
+    background-color: #fcf5eb;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.img-hori img {
+    max-width: 100%;
+
+}
+.text{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.text-content-two {
+    font-size: 2em;
+    max-width: 60%;
+    word-wrap: break-word;
+    text-align: center;
+
+}
